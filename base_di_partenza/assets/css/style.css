@@ -264,6 +264,14 @@ footer a {
   section h2 {
     background-color: #3333;
   }
+  button {
+    padding-block: 12px;
+    padding-inline: 3%;
+  }
+  input {
+    padding-block: 12px;
+    padding-inline-end: 15%;
+  }
   aside div {
     display: inline-block;
     width: 30%;
