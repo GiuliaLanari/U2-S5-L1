@@ -29,6 +29,9 @@ header {
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
 }
+.logo-html {
+  border: 5px solid lightblue;
+}
 header div img {
   margin-bottom: 20px;
 }
@@ -190,31 +193,27 @@ footer {
 footer a {
   color: fuchsia;
 }
-@media screen and (min-width: 0px) and (max-width: 576px) {
-  header nav li {
-    display: inline-block;
-  }
-  table {
-    margin-inline-end: 4rem;
-  }
-  iframe {
-    height: 15rem;
-  }
-  section h2 {
-    background-color: #3333;
-  }
+
+/*CREAZIONE DELLE MEDIA PER I VARI SCHERMI*/
+
+header nav li {
+  display: inline-block;
+}
+table {
+  margin-inline-end: 4rem;
+}
+iframe {
+  height: 15rem;
+}
+section h2 {
+  background-color: #3333;
 }
 
-@media screen and (min-width: 577px) and (max-width: 768px) {
-  header nav li {
-    display: inline-block;
-  }
+@media screen and (min-width: 577px) {
   table {
     margin-inline: auto;
   }
-  section h2 {
-    background-color: #3333;
-  }
+
   button {
     padding: 12px 15px;
   }
@@ -227,9 +226,11 @@ footer a {
 @media screen and (min-width: 769px) {
   header {
     text-align: start;
+    padding-block: 1rem;
   }
   header div {
     text-align: start;
+    width: 75%;
     display: inline-block;
   }
 
@@ -253,32 +254,58 @@ footer a {
     margin-inline: auto;
   }
   iframe {
-    max-width: 45%;
+    max-width: 49%;
+    height: 21rem;
   }
   section {
     display: inline-block;
-    max-width: 45%;
+    max-width: 49%;
+    height: 21rem;
     border-radius: 20px;
     vertical-align: bottom;
   }
-  section h2 {
-    background-color: #3333;
-  }
+
   button {
     padding-block: 12px;
     padding-inline: 3%;
   }
-  input {
-    padding-block: 12px;
-    padding-inline-end: 15%;
-  }
+
   aside div {
     display: inline-block;
-    width: 30%;
+    width: 33%;
+    margin-right: -4px;
     vertical-align: middle;
   }
 
   footer {
     padding-inline: 15rem;
+  }
+}
+
+@media print {
+  main {
+    box-shadow: none;
+  }
+  header {
+    display: none;
+  }
+  table {
+    margin-inline-end: 4rem;
+  }
+  thead tr {
+    background-color: white;
+    color: black;
+  }
+  iframe {
+    display: none;
+  }
+  section {
+    display: none;
+  }
+  aside {
+    display: none;
+  }
+  footer {
+    display: none;
   }
 }
